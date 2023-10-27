@@ -1,7 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/warengonzaga/sample-nextjs-app.git
-cd sample-nextjs-app/
 npm install
 npm run build
 npm install pm2 -g

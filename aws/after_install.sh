@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /opt/frontend/
 npm install
 npm run build
 npm install pm2 -g

@@ -8,6 +8,7 @@ export NVM_DIR="$HOME/.nvm"
  
 # remove module files
 rm -rf node_modules package-lock.json
+
 pwd
 npm install
 npm run build

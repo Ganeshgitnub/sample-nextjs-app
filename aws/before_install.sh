@@ -15,10 +15,7 @@ else
   echo "Creating ${DIR} directory"
   mkdir ${DIR}
 fi
- 
-#delete all the files in current directory
-rm -rf /opt/frontend/*
-rm -rf /opt/frontend/.gitignore
+
 
 nvm install node
 npm -v

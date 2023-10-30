@@ -16,7 +16,8 @@ pm2 start npm --name nextjs-app -- run start -- -p 3000
 pm2 list nextjs-app
 
 # copy nginxconf file to local nginx config path
-aws s3 cp s3://cpcdnginxconfig/frontend/ /etc/nginx/sites-available/frontend
+aws s3 cp s3://cpcdnginxconfig/frontend/frontendnginx /etc/nginx/sites-available/frontend
+sudo ln -s /etc/nginx/sites-available/frontend /etc/nginx/sites-enabled/
 
 sudo systemctl restart nginx
 sudo systemctl start nginx

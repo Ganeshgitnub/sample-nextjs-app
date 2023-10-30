@@ -12,7 +12,7 @@ rm -rf node_modules package-lock.json
 pwd
 
 # delete frontend process in running pm2
-pm2 delete frontend
+pm2 delete nextjs-app
 
 npm install
 npm run build

@@ -18,6 +18,9 @@ pm2 list nextjs-app
 
 # copy nginxconf file to local nginx config path
 aws s3 cp s3://cpcdnginxconfig/frontend/frontendnginx /etc/nginx/sites-enabled/frontend
+curl http://checkip.amazonaws.com
+current_ip=$( curl http://checkip.amazonaws.com )
+sed -i "s/$current_ip/127.0.0.1/g" frontend
 
 sudo systemctl restart nginx
 sudo systemctl start nginx

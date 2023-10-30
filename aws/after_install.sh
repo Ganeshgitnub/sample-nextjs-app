@@ -14,3 +14,11 @@ npm run build
 npm install pm2 -g
 pm2 start npm --name nextjs-app -- run start -- -p 3000
 pm2 list nextjs-app
+
+# copy nginxconf file to local nginx config path
+aws s3 cp s3://cpcdnginxconfig/frontend/ /etc/nginx/sites-available/frontend
+
+sudo systemctl restart nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx

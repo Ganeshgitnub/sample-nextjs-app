@@ -20,7 +20,7 @@ npm install pm2 -g
 pm2 start npm --name nextjs-app -- run start -- -p 3000
 pm2 list nextjs-app
 
-# copy nginxconf file to local nginx config path
+# copy nginxconf file to local custom nginxconfig file
 aws s3 cp s3://cpcdnginxconfig/frontend/frontendnginx /etc/nginx/sites-enabled/frontend
 
 public_ip=$(curl -s http://checkip.amazonaws.com)

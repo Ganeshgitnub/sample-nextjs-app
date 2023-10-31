@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/frontend
+    overwrite: true
+hooks:
+  BeforeInstall:
+    - location: aws/before_install.sh
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: aws/after_install.sh
+      timeout: 300
+      runas: root
